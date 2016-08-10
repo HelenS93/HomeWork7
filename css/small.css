@@ -1,0 +1,71 @@
+body {
+    min-width: 300px;
+}
+.logo.orange {
+    display: block;
+    text-align: center;
+}
+.col3 {
+    display: block;
+    width: 100%;
+}
+#menu ul {
+    display: none;
+    position: static;
+    width: auto;
+}
+#menu ul.menu {
+    display: block;
+}
+#menu ul li {
+    display: block;
+    text-align: center;
+}
+#menu ul a {
+    padding: 10px;
+}
+#menu ul a.active {
+    border: none;
+}
+#menu .buttonInherit {
+    display: block;
+    margin: 1em auto;
+    background: none;
+    width: 200px;
+    font: 20px OpenSansSemiBold, sans-serif;
+    font-weight: 400;
+}
+#banner {
+    padding: 10px;
+}
+#banner .container {
+    margin: 0;
+}
+.price {
+    display: block;
+}
+#says .layer{
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+#LiContent {
+    width: 100%;
+}
+#contact, iframe {
+    float: none;
+}
+iframe {
+    width:100%;
+}
+.layer {
+    margin: 0 auto 2em;
+}
+.arrow_box {
+    position: relative;
+    max-width: 70%;
+    left: 57px;
+}
+.comment {
+    display: block;
+}

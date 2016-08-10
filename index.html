@@ -4,21 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Index</title>
-    <script src="Script/jquery-1.12.4.min.js"></script>
-    <script src="Script/Site.js"></script>
-    <script src="Script/menu.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' media='all and (max-width: 500px)' href='css/small.css' />
     <style>
-        @media (max-width: 600px) {
-            .price {
-                display: block;
-            }
-            @media (max-width: 600px) {
-                #says .layer{
-                    width: 100%;
-                }
-            }
-            @media all and (max-width: 850px) and (min-width: 600px) {
+            @media all and (max-width: 850px) and (min-width: 500px) {
                 .border span {
                     display: block;
                     margin-top: 0.5em;
@@ -26,18 +15,36 @@
                 .arrow_box {
                     height: auto;
                 }
-            }
         }
+            @media all and (max-width: 1000px) {
+                #menu, #menu .container {
+                    margin: 0 0.5em;
+                }
+            }
     </style>
 </head>
 <body>
+<script language='javascript'>
+    function Scriptcode(){
+        //map height
+        var heightContact = document.getElementById('contact').clientHeight;
+        var heightFrame = document.getElementById('map').style.height = heightContact+"px";
+
+        //menu mobile
+                document.getElementById('toggle').onclick = function() {
+                    var menu = document.querySelector('.menuLi'); // Using a class instead, see note below.
+                    menu.classList.toggle('menu');
+                };
+    }
+</script>
 <!--Menu begin-->
 <div id="menu" class="upper">
     <div class="container">
         <div class="logo orange">
             Company <span>Name</span>
         </div>
-        <ul>
+        <button class='buttonInherit' id="toggle">Меню</button>
+        <ul class="menuLi">
             <li><a href="#" class="active">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Portfolio</a></li>
@@ -196,5 +203,39 @@
     </div>
 </section>
 <!--Says end-->
+<!--Contact begin-->
+    <div id="contact">
+        <img src="img/iconPlace.png" alt="place">
+        <div class="contactText">Iconic Graphicsbr <br>
+            123 Main Street <br>
+            EastWest <br>
+            LHR 54500
+        </div>
+        <img src="img/iconPhone.png" alt="phone">
+        <div class="contactText">
+            012.345.6789
+        </div>
+        <img src="img/iconMail.png" alt="mail">
+        <div class="contactText mail">
+            <a href="mailto:info@iconicgraphics.com">info@iconicgraphics.com</a>
+        </div>
+        <img src="img/facebook.png" alt="social_facebook">
+        <img src="img/twitter.png" alt="social_twitter">
+        <img src="img/in.png" alt="social_in">
+    </div>
+    <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d21939.223419478265!2d30.791268649999992!3d46.57927145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1470727580173" width="50%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div style="clear: both"></div>
+<!--Contact end-->
+<!--footer begin-->
+<footer>
+    <p>Copyright &#169; 2014 <span>Company Name</span>. All rights reserved.</p>
+    <p>Designed by <span>IconicGraphics.com</span></p>
+</footer>
+<!--footer end-->
+<script>
+    //call after page loaded
+    window.onload=Scriptcode;
+    window.onresize = Scriptcode;
+</script>
 </body>
 </html>
